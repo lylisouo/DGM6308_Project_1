@@ -1,0 +1,247 @@
+/* DGM 6308 Project 1 - style.css */
+
+/* Color palette - soft and cozy */
+:root {
+  --bg: #faf7f5;
+  --panel: #ffffff;
+  --text: #5d4e4e;
+  --muted: #9e8e8e;
+  --accent: #d4a5a5;
+  --accent-light: #f5e6e6;
+  --success: #a8d5ba;
+  --border: #e8e0de;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.header .emoji {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  margin: 12px auto 0;
+  max-width: 400px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Main container */
+.container {
+  max-width: 500px;
+  margin: 20px auto 40px;
+  padding: 0 16px;
+}
+
+/* Panel / Card style */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.panel h2 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form label {
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input[type="text"] {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #c49494;
+}
+
+#clearBtn {
+  background: var(--accent-light);
+  color: var(--text);
+}
+
+#clearBtn:hover {
+  background: #eddada;
+}
+
+/* Message */
+.message {
+  min-height: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Controls row */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.toggle input {
+  accent-color: var(--accent);
+}
+
+/* Task list */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.card.done {
+  opacity: 0.6;
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.card.done:hover {
+  background: #9dcbae;
+}
+
+.task-text {
+  font-weight: 500;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card.done .status {
+  color: #5a8f6a;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+}

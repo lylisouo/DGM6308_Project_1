@@ -60,7 +60,7 @@ totalCountElement.textContent = manager.tasks.length;
 storage.save(manager);
 }
 
-// Project 2 requirement: invalid action + throw + try/catch + show message on page
+// Expection Handling if users did not type anything.
 function validateTaskName(taskName) {
 if (taskName === "") {
 throw new Error("Task name cannot be empty.");

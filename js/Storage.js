@@ -1,6 +1,6 @@
 import { Task } from "./Task.js";
 
-// This class saves/loads data from localStorage.
+// Here saves/loads data from localStorage.
 export class Storage {
 storageKey;
 isEnabled;

@@ -1,4 +1,3 @@
-// This class stores one task item.
 export class Task {
     id;
 name;

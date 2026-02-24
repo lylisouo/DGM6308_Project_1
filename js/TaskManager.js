@@ -1,6 +1,6 @@
 import { Task } from "./Task.js";
 
-// This class manages all tasks.
+// Manages all tasks.
 export class TaskManager {
 tasks;
 nextId;
